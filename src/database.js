@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const URI = 'mongodb://127.0.0.1:27017/productos-crud'; 
+const URI = 'mongodb+srv://mmcastro29:dRgFdhga3mefnUXS@cluster0.ovxagr1.mongodb.net/'; 
 
 mongoose.connect(URI, {
   useNewUrlParser: true,
