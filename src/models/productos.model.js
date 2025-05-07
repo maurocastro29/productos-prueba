@@ -9,7 +9,6 @@ const ProductoSchema = new Schema({
   stock: Number,
   categoria: String,
   createAt: String,
-  imagenes: [String],
   rating: {
     type: Number,
     default: 0,
