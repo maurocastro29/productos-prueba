@@ -41,7 +41,10 @@ const crearProducto = async (req, res) => {
     }
 
     // Obtener paths de las imágenes
-    const imagenes = req.files.map(file => `/uploads/${file.filename}`);
+    const imagenes = Array.isArray(req.files)
+      ? req.files.map(file => `/uploads/${file.filename}`)
+      : [];
+
 
     // Crear el producto con imágenes incluidas
     const nuevoProducto = await productosDAO.crearProducto({
